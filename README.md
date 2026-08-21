@@ -15,7 +15,7 @@ A comparsion between traditional sequential workflow vs integrated co-design wor
 - config.py: Top-Level Aircraft Requirements (TLARs) and physical constants for the aircraft-trajectory co-design problem.
 - aerodynamics.py: Lift and drag coefficient models for the co-design problem
 - dynamics.py: Point-mass flight mechanics: rate equations for altitude and airspeed
-- geometry.py: Wing structural mass model: $m_{\tex{wing}}$ = $f(S,AR)$
+- geometry.py: Wing structural mass model: $m_{\text{wing}}$ = $f(S,AR)$
 - collocation.py: Performs the trapezoidal integration
 - optimize_codesign.py: Calls the necessary functions and performs the main design loop (in-progress)
 
