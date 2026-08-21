@@ -12,11 +12,14 @@ A comparsion between traditional sequential workflow vs integrated co-design wor
 | - **Flaw:** Cruise-optimized wing may be undersized for steep climbs, forcing oversized, heavy engines | - **Result:** Minimizes total mission fuel burn/ energy across the entire flight envelope| 
 
 ## 2. File definitions
-- config.py:Top-Level Aircraft Requirements (TLARs) and physical constants for the aircraft-trajectory co-design problem.
+- config.py: Top-Level Aircraft Requirements (TLARs) and physical constants for the aircraft-trajectory co-design problem.
 - aerodynamics.py: Lift and drag coefficient models for the co-design problem
 - dynamics.py: Point-mass flight mechanics: rate equations for altitude and airspeed
-- geometry.py: Wing structural mass model: m_wing = f(S,AR)
+- geometry.py: Wing structural mass model: $m_{\tex{wing}}$ = $f(S,AR)$
+- collocation.py: Performs the trapezoidal integration
+- optimize_codesign.py: Calls the necessary functions and performs the main design loop (in-progress)
 
 
 ## 3. Status Updates
 - 8/19/2026 Commit: Defining project repository, README.md file, project definition, and added initial simple models defined in: aerodynamics.py, config.py, dynamics.py, geometry.py
+- 8/21/2026 Commit: Added new function files (collocation.py and optimize_codesign.py) and fixed the error with toy problem definition (Intended to create a small scale UAV with battery pack instead of conventional turbojets)

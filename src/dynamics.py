@@ -36,3 +36,18 @@ def acceleration(T, D, m, gamma):
 
     dV_dt = (T - D)/m - GRAVITY*math.sin(gamma)
     return dV_dt
+
+def downrange_rat(V, gamma):
+    """
+    Rate of change of downrange distance (dx/dt)
+    """
+    dx_dt = V * math.cos(gamma)
+    return dx_dt
+
+def power_required(T, V, eta_prop):
+    """
+    Electrical power draw from the battery
+    """
+
+    P = T * V/eta_prop
+    return P
